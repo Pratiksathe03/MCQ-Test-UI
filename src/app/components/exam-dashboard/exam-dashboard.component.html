@@ -1,0 +1,29 @@
+<div class="header">
+    <div class="left-content">
+        <h2>Test Dashboard</h2>
+        <p>Test Name: {{testData?.Name}}</p>
+    </div>
+    <div class="right-content">
+        <h1>{{display}}</h1>
+        <p>Duration: {{testData?.Duration}}</p>
+    </div>
+</div>
+<div class="line-break"></div>
+
+<div class="quation-container">
+    <div class="quation" *ngFor="let que of testData?.Questions; let j = index">
+            <p>{{j+1}} {{que.question}}</p>
+            <div class="options">
+                <p  *ngFor="let opt of que.options; let i = index">
+                    <input type="radio" id="options" name="{{j}}" value= {{opt}} [(ngModel)]="que.selectedOption">
+                    <label for="{{j}}">{{opt}}</label>
+                </p>
+            </div>
+    </div>
+</div>
+
+<div class="line-break"></div>
+
+<div>
+    <input type="submit" value="Submit Test" (click)="onSubmit()" />
+</div>

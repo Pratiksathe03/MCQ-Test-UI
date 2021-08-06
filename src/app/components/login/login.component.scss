@@ -1,0 +1,25 @@
+.Register-window{
+    display: block;
+    position: relative;
+    top: 100px;
+    width: 25%;
+    margin: auto;
+    padding: 20px;
+    border: solid 1px #000;
+
+    h1{
+        text-align: center;
+    }
+
+    .input-feilds{
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+        margin: auto;
+
+        input{
+            margin: 12px;
+            padding: 12px;
+        }
+    }
+}
